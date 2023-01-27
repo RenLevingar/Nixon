@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Vote Here</title>
 </head>
-<body onload="loader(); context()">
+<body onload="loader(); context()" id="page">
 
     <h1>Vote Here US 1968 Elections</h1>
     <h3>1968 Election Canidates: <span class="republican">Richard Nixon(R)</span> and <span class="democratic">Hubert Humphrey(D)</span></h3>
@@ -17,16 +17,18 @@
         <div class="nixon">
             <h2 class="republican">Richard Nixon</h2>
             <p>Nixon is a former graduated from Duke Law School in 1937, practiced law in California, then moved with his wife Pat to Washington in 1942 to work for the federal government. After active duty in the Naval Reserve during World War II, he was elected to the House of Representatives in 1946.</p>
-            <button class="nButton" id="richard" onclick="submitter()">Nixon</button>
+            <button class="nButton" id="richard" onmousemove="correct()" onmouseleave="correctReset()" onclick="submitter()">Nixon</button>
         </div>
 
         <div class="humphrey">
             <h2 class="democratic">Hubert Humphrey</h2>
             <p>Humphrey served three terms in the Senate from 1949 to 1964, and was the Senate Majority Whip for the last four years of his tenure. During this time, he was the lead author of the Civil Rights Act of 1964, introduced the first initiative to create the Peace Corps, and chaired the Select Committee on Disarmament.</p>
-            <button class="hButton" id="hubert" onmousemove="wrong()" onmouseenter="noClick()" onmouseleave="cursorReset()">Humphrey</button>
+            <button class="hButton" id="hubert" onmouseenter="noClick()" onmouseleave="cursorReset()">Humphrey</button>
         </div>
     </div>
     </div>
+
+    <img src="nixonButton.png" id="nixBTN" alt="Voted Button">
 
 <script src="script.js"></script>
 </body>
