@@ -19,38 +19,21 @@ function cursorReset(){hubert.style.cursor = "pointer"}
 
 // moving object
 page.onclick = function(event){
-    let coords = this.getBoudingClientRect();
+    let coords = this.getBoundingClientRect();
 
     let  buttonCoords = {
-        top: event.clientY - coords.top - coords.clientTop - nixBTN.clientHeight / 2 - 10,
-        left: event.clientX - coords.left - coords.clientLeft - nixBTN.clientWidth / 2 - 7
+        top: event.clientY - coords.top - page.clientTop - nixBTN.clientHeight / 2 - 10,
+        left: event.clientX - coords.left - page.clientLeft - nixBTN.clientWidth / 2 - 10
     }
+
+    nixBTN.style.left = buttonCoords.left + 'px';
+    nixBTN.style.top = buttonCoords.top + 'px';
 }
 
-// field.onclick = function(event){
-//     //window-relative filed coordinttes 
-//     let fieldCoords = this.getBoundingClientRect();
-
-//     // the ball has poistion: absoulte, the field: position: relative
-//     // so ball coordiates are relatvie to the field's inner left-upper corner
-//     let ballCoords = {
-//         top: event.clientY - fieldCoords.top - field.clientTop - ball.clientHeight / 2 - 10,
-//         left: event.clientX - fieldCoords.left - field.clientLeft - ball.clientWidth / 2 - 7
-//     }
-
-//     // prevent top boundary crossing
-//     if(ballCoords.top < 0){ballCoords.top = 0;}
-
-//     // prevent left boundary crossing
-//     if(ballCoords.left < 0){ballCoords.left = 0;}
-
-//     // prevent bottom boundary crossing
-//     if(ballCoords.top + ball.clientHeight > field.clientHeight){ballCoords.top = field.clientHeight - ball.clientHeight;}
-
-//     // prevent rigth boundary crossing
-//     if(ballCoords.left + ball.clientWidth > field.clientWidth){ballCoords.left = field.clientWidth - ball.clientWidth;}
-
-//     ball.style.left = ballCoords.left + 'px';
-//     ball.style.top = ballCoords.top + 'px';
-
-// }
+// for loop
+function remake(){
+   richard.style.color = "green";
+   for(let i=0; i>4; i++){
+    
+   }
+};

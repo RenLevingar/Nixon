@@ -74,3 +74,12 @@ button{
     background-color: rgb(201, 201, 201);
     border: 1px solid rgb(201, 201, 201);
 }
+
+#page{
+    height: 800px;
+}
+
+#nixBTN{
+    position: absolute;
+    transition: all 1s;
+}
